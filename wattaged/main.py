@@ -91,8 +91,8 @@ def main():
         )
         total_watt_hours += wh
     # Paris 2021-07-27 kWh price is 0.14 EUR
-    print(f"{total_watt_hours}\tkWh between {start} and {end}")
-    print(f'\033[94m~={total_watt_hours*0.14/1000} EUR\033[0m', file=sys.stderr)
+    print(f"{total_watt_hours:.3f}\tWh between {start} and {end}")
+    print(f'\033[94m~={total_watt_hours*0.14/1000:.3f} EUR\033[0m', file=sys.stderr)
 
 
 def pd_timestamp_to_hours(ts) -> float:
