@@ -6,13 +6,14 @@ Wattage Daemon is a utility that logs the consummed electricity and allows you t
 
 To install the CLI, run the following:
 ```sh
-git clone git@github.com:sam1902/wattaged.git wattaged
-cd wattaged
-chmod +x install.sh
-./install.sh
+pip3 install -U wattaged
 wattage --help
+
+# Install the daemon to /opt/wattaged
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/sam1902/wattaged/HEAD/install.sh)"
 ```
-The install script does a lot of things:
+
+The install script (separate from pip3 install) does a lot of things:
  - It moves the `wattage_apcupsd.sh` script to `/opt/wattaged`
  - It adds a root cron task to run `wattage_apcupsd.sh` every 5 minutes and log the results to `/var/wattaged/watts.log`
  - It adds a logrotate config to rotate the wattaged logs before it gets out of hands
@@ -29,6 +30,18 @@ wattage 2>/dev/null | cut -f 1
 ```
 
 as the price in EUR is outputted to stderr, and the Wh value is tab separated from the unit and timespan.
+
+## Development
+
+To install the latest version from Github, run:
+
+```
+git clone git@github.com:sam1902/wattaged.git wattaged
+cd wattaged
+chmod +x install.sh
+./install.sh
+pip3 install -U .
+```
 
 ## Usage
 ```
