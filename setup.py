@@ -6,6 +6,6 @@ setup(
     packages = ['wattaged'],
     entry_points = {
         'console_scripts': [
-            'wattage = wattaged.__main__:main'
+            'wattage = wattaged.main:main'
         ]
     })
