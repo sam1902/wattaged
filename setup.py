@@ -26,3 +26,6 @@ setup(
     install_requires=["pandas"],
     entry_points={"console_scripts": ["wattage = wattaged.__main__:main"]},
 )
+
+print("wattage CLI is now installed, but to make it work, you still need to install the daemon. To do so, run the following and follow the instructions:")
+print('/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/sam1902/wattaged/HEAD/install.sh)"')
