@@ -8,6 +8,7 @@ To install the CLI, run the following:
 ```sh
 git clone git@github.com:sam1902/wattaged.git wattaged
 cd wattaged
+chmod +x install.sh
 ./install.sh
 wattage --help
 ```
