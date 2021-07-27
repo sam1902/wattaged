@@ -20,6 +20,16 @@ The install script does a lot of things:
 
 The CLI will try reading logs from `/var/log/wattaged`. Since the daemon logs every 5 minutes, wait at least 5 minutes to see the first log appear.
 
+The CLI also displays the price in EUR based on the price per kWh in France in 2021-07-27.
+
+If you want to use the output of `wattage` for something, you can get the Wh value alone by doing:
+
+```sh
+wattage 2>/dev/null | cut -f 1
+```
+
+as the price in EUR is outputted to stderr, and the Wh value is tab separated from the unit and timespan.
+
 ## Usage
 ```
 usage: wattage [-h] [--start START] [--end END] [--logdir LOGDIR]
