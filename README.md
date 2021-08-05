@@ -1,4 +1,5 @@
 # wattaged
+[![PyPI version](https://badge.fury.io/py/wattaged.svg)](https://badge.fury.io/py/wattaged)
 
 Wattage Daemon is a utility that logs the consummed electricity and allows you to quickly compute the consummed kWh
 
