@@ -8,7 +8,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="wattaged",
-    version="0.1.0",
+    version="0.1.1",
     packages=["wattaged"],
     description="wattaged is a utility that logs the consummed electricity and allows you to quickly compute the consummed kWh",
     long_description=README,
